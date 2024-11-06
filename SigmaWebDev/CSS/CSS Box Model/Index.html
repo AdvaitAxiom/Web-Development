@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        /* CONTENT-->PADDING-->BORDER--->MARGIN */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            background-color: aqua;
+        }
+        .box1{
+            color: red;
+            padding: 10px;
+            margin: 45px;
+            border: 2px solid blue;
+            height: 200px;  /*Here height means the height of the content excluding the padding and border*/
+            box-sizing: border-box;
+            /* Using it means previously we have taken content+padding+border=200 px */
+            /* Margin is not included in box sizing */
+        }
+        .box2{
+            color:yellow;
+            padding: 10px;
+            margin: 25px;   /*Margin collapse*/
+            border: 2px solid blue;
+            height: 200px;
+            box-sizing: border-box; 
+
+            /* Margin collapse lower margin of the first box and the upper margin of the second box collapses 
+            
+            Max of both margins will remains
+            if box1=35 and box2= 25 then the margin will be 35 b/w them and within that 35 the 25 of the other will ly*/
+        }
+        a:visited{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- Multiple class can be assigned to a tag -->
+    <div class="box box1">I am a box </div>
+    <div class="box box2">I am a box </div>
+    <a rel="noopener" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcloud2data.com%2Fbox-model%2F&psig=AOvVaw1eVMBOnW22TCrBTvrIxzrD&ust=1722497052618000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCICRzdvf0IcDFQAAAAAdAAAAABAE"target="_blank">CSS BOX MODEL</a>
+    <br>
+    <a rel="noopener" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2Ftheleanprogrammer%2Fmastering-margin-collapsing-css-16ee592cd920&psig=AOvVaw1t6sQB7hDbqjLfS3FfGbxQ&ust=1722496944242000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLCqiKjf0IcDFQAAAAAdAAAAABAQ" target="_blank">Margin collapse image</a>
+</body>
+</html>

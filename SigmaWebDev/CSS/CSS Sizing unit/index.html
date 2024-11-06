@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Unit</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 2048px; */
+            height: 10vh;
+            width: 80vw;    /*View height*/
+            margin: auto;   /*Space before and after the block element. It doesn't work for inline elements*/
+            background-color: aquamarine;
+            font-size: 2rem;    /*Twice of th root elemnt.Here the root element is html*/
+        }
+        .container{
+            box-sizing: border-box;
+            border: 2px solid black;
+            height: 40vh; /*View height*/
+            min-height: 80vh;/* max height can vary with content*/
+            /* width: 2048px; */
+            width: 80vw;    /*View width*/
+            margin: 23px auto;   /*Top-bottom 23px and left right auto*/
+            background-color: aquamarine;
+            font-size: 20px;
+        }
+        .container > div{
+            font-size: 4em; /*Inherit the font size of .container and making it 1.5 times then apply.
+            X em= inherited font-size * X */
+            width: 50%; /* 50% of parent width*/
+            border: 2px solid red;
+        }
+
+        .container >div> div{
+
+            border: 2px solid blue;
+            width: 50%;
+        }
+
+        html{
+            font-size: 12px;/*HTML is a root element. it's default size is 16*/
+        }
+        .cont{
+            background-color: yellow;
+            color: blue;
+            font-size: 22px;
+            width: 100vmin; /*vmin = min of height or width. 
+            If height is less than width then 
+            vmin=vh 
+            and 
+            if width is less than height then 
+            vmin=vw*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">This is a box</div>
+    <div class="container">HI
+        <div>
+            This is a container box 
+            <div>hello</div>
+        </div>
+    </div>
+
+    <div class="cont">
+        vmin = min of height or width.
+        <br> 
+        If height is less than width then 
+        vmin=vh
+        <br> 
+        If width is less than height then 
+        vmin=vw. In mobile vmin=vw and in pc vmin=vh.
+        <br>
+        vmax is the opposite of vmin and used in some special scenario.
+        <br>
+        css mdn docs reference for units.
+    </div>
+</body>
+</html>

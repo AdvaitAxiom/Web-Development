@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial</title>
+    <link rel ="stylesheet" href="First.css">
+    <style> /*Internal CSS*/
+        p{
+            color: purple;
+            background-color: sandybrown /*!important*/;
+        }
+        </style>
+</head>
+<body>
+    <h1>CSS Tutorial</h1>
+    <h3>Inline CSS</h3>
+    <p style = "color: red; BACKGROUND-COLOR: YELLOW;">CSS TUTORIAL</p><!--Inline css-->
+    <h3>Internal CSS</h3>
+    <p>Inline css will always get the higher priority so if we use inline css then internal css will not work.</p><!--Here the internal css will work-->
+
+
+    <!-- <link rel ="stylesheet" href="First.css">------ If we link the css file here the canges will be done according to the First.css cause the last one always gets the highest preference. Here the First.css file code got the more priority than the internal css for line 21 code.To overcome this we use !important keyword  -->
+    
+<link rel ="stylesheet" href="First.css"><!--if the important tag is used with the internal css then this line will not work. By the important keyword we set a priority explicitly to that internal css code -->
+
+
+
+<!-- <h2>Priority of css types</h2>
+<p>Inline css>the last edited or added css between external and internal css</p> -->
+
+<!-- css selectros---1. element, id, class, grouping -->
+
+
+</body>
+</html>

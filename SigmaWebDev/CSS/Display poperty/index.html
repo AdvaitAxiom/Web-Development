@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .box {
+            border: 2px solid blue;
+
+            /*display:inline;
+            
+            Here the div class bo are converted to inline elements. If one of the div clas is not box then it will be block element only class with box will be inline elements.*/
+            margin: 10px;
+            width: 70px;
+            padding:24px;/*Margin, padding and width will not work from the top if it is inline. To use it we can change it to inline block*/
+            
+            display:inline-block;
+
+        }
+        .box1{
+            /* display: none; */
+            /* Area will also be deallocated after content being hidden */
+            /* visibility: hidden; */
+            /* Area remains same but the block will be disappeared */
+            display: flex;/*none,block,inline-block,grid,flex*/
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">box</div>
+    <div class="box">box1</div>
+    <span>Hello</span>
+    <span>Have a good day</span>
+    <a rel="noopener" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">css display property</a>
+
+</body>
+
+</html>

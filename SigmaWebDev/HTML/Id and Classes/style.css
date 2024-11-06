@@ -1,0 +1,12 @@
+/* to use class we use . */
+.red{
+    color: red;
+}
+.bg-yellow{
+    background-color: yellow;
+}
+
+/* to call id we use hash */
+#firstdiv{
+    /* background-color: red; */
+}

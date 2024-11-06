@@ -1,0 +1,261 @@
+<!-- Html is also known as MARKUP LANGUAGE -->
+
+<!DOCTYPE html>
+
+    <html lang="en">
+
+    <head> <!--Meta text, Title, External sheet link-->
+
+        <!-- meta use in SEO -->
+        <meta charset="UTF-8"> 
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!--different screen optimisation-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Description of the site-->
+        <meta name ="description" content ="This is description">
+
+        <!-- If someone search over these keywords then my website will be visible-->
+        <meta name ="keywords" content ="html, html tutorials, web dev">
+
+        <!-- The searh in serch engine will follow our website in Seearch Engine-->
+        <meta name ="robots" content ="INDEX, FOLLOW">  
+
+        <!--To add external css-->
+        <link rel= "stylesheet" href = "First.css">
+
+        <!-- To add external Javascript-->
+        <script src="First.js"></script>
+        <title>Alapan</title>
+    </head>
+
+    <body>
+            <h1>Heading</h1>
+            <h2>Heading</h2>
+            <h3>Heading</h3>
+            <h4>Heading</h4>
+            <p>This is new paragraph</p>
+            <b><i>Lorem40 used to gain a demo text</i></b>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> doloribus labore dolorem quaerat voluptatem amet? Reprehenderit exercitationem suscipit qui a nihil accusantium fugiat unde quas veritatis. Quaerat maxime distinctio reiciendis natus eum maiores corrupti doloremque aliquid et dicta eius nesciunt neque illum repudiandae, architecto ipsum, excepturi quo voluptates, nostrum nobis.</p>
+<!--ctrl+ enter to jump to a new line-->
+
+
+
+
+<hr>
+            <p>first</p> <!--p* number of p we want-->
+            <p>Second</p>
+            <p>third</p>
+            <p>fourth</p>
+            <strong>HOLA</strong>   <!--Strong tag-->
+            <P>Lorem ipsum <em>Hola</em> dolor sit amet.</P>    <!--Emphasis tag-->
+
+
+
+
+
+            <a href = "https://google.com">Go to goolge</a> <!-- link-->
+            <a href = "https://google.com"target= "blank">Go to goolge</a> <!-- link open with neew tab-->
+
+
+
+
+            <img src ="abc.jpg" alt ="Internet problem" height = 200 width = 300><!-- images-->
+
+
+
+
+
+            <ul type ="Square">Unordered list       <!--Unordered list with type-->
+                <li>abc</li>
+                <li>def</li>
+                <li>ghi</li>
+                <li>jkl</li>
+            </ul>
+            <ol type = "A">Ordered list         <!--ordered list with type-->
+                <li>abc</li>
+                <ul>
+                    <li>123</li>            <!-- list iwthin list-->
+                    <li>456</li>
+                </ul>
+                <li>def</li>
+                <li>ghi</li>
+                <li>jkl</li>
+            </ol>
+
+         
+            
+
+
+<!-- Html tables -->
+            <center><h1>HTML TABLES</h1></center>
+            <table>
+                <thead><tr>     <!--table row-->
+                    <th>col1</th>
+                    <th>col2</th>
+                    <th>col3</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ABC</td>
+                        <td>DEF</td>
+                        <td>GHI</td>
+                    </tr>
+                    <tr>
+                        <td>123</td>
+                        <td>456</td>
+                        <td>789</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+
+
+
+
+
+<!--HTML Forms-->
+            <marquee direction ="right"><h1>This is form </h1></marquee>>
+            <form action= "backend.php"><!--backend will be in php-->
+                <label for= "name">        <!--Label tag of name--- THE WORD AFTER FOR SHOULD BE THE SAME WITH ID -->
+                <div>
+                    Name:<input type = "text" placeholder = "Your Name"name="Your Name" id = "name">   <!--input-->
+                </div></label>
+                <br>
+                <div>
+                    Roll:<input type = "number" placeholder = "Enter number">
+                </div>
+                <br>
+                <div>
+                    Email:<input type = "email"  placeholder = "Your Email"name ="myemail">    <!--input shortcut= input:+Enter-->
+                </div>
+                <br>
+                <div>
+                    <input type="date" name ="date">     <!--input date-->
+                </div>
+                <br>
+                <div>
+                    Are you eligible <input type="checkbox" value="myeligibility">  <!--checkbox-->
+                    Are you eligible <input type="checkbox" value="myeligibility" checked >  <!--checkbox-->
+                </div>
+                <br>
+                <div>
+                    Gender: Male <input type="radio" name="mygender">   <!--radio tag-->
+                    Female <input type="radio" name="mygender">
+                    Other <input type="radio" name="mygender">
+                </div>
+                <br>
+                <div>
+                    <label><font color= "red">Select your car:</font> 
+                        <select name= "car" id ="car">
+                            <option value= "Indica">Indica</option>
+                            <option value= "Ford">Ford</option>
+                            <option value= "Tata" selected>Tata</option>    <!--Selected attribute is used to select an option by default-->
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    write about yourself:<br><text area name="mytext" cols="90" rows= "10"></textarea>  <!--text area-->
+                </div>
+                <br>
+                <div>
+                    <input type="submit" value="Submit now" name= "mysubmit"> <!--to move a selected line downwords= "ctrl+ l" to select line & "alt+downarrow" to take that to downwards-->
+                </div>
+                <br>
+                <div>      
+                    <input type="reset" value="Reset now" name= "myreset">  <!--reset button-->
+                </div>
+            </form>
+
+
+
+
+
+
+<!-- Block and Inline Elements -->
+    <CENTER><H1>Inline and block Elements</H1></CENTER>
+            <!-- Paragraph is a block element if we want to utilize the size spaces of a paragraph then we cant -->
+            <p style="border: 2px solid black" >This is a paragraph</p>
+            <p>This is a paragraph</p>
+            <!-- Solution is inline elements -->                
+            <span style ="border: 2px solid black">This is a paragraph</span>
+            <span>This is a paragraph</span>
+            <!-- Solution is inline elements with anchor tag -->                
+            <a><span style ="border: 2px solid black">This is a paragraph</span></a>
+            <span>This is a paragraph</span>
+        
+
+
+
+
+
+
+<!-- IDs and Classes iN HTML -->
+<h1>IDs and classes inHTML</h1>
+            <DIV id="mainbox" class ="redBg"></DIV>     <!--id helps to identify the div individually, it is needed when we call the css file to colour or any kind of changes to this mainbox. In a simple note the css file will call the block whose id is mainbox and apply those functions and the class will apply some constrains to those blocks which contain the same class naming redBg. Suppose we want to make a red border to diffrent 40 boxes then we can feed those information to class ="redBg" and apply that class to those boxes instead of coding manually-->
+
+            <span class="redBg borderBlack"></span>     <!--span.redBg== . is uded to create a span tag with the redBg class-->
+
+            <span id="mainspan"></span>   <!--span#mainspan== # is used to create a span tag with id = "mainspan"-->
+
+            <div class="redBg anotherclass"></div>  <!--div.redBg.anotherclass-->
+
+            <!-- emmet takes div tag as default -->
+            <div class="blackbackground"></div><!--.blackbackground-->
+
+            <!-- Creating multiple elements -->
+            <!-- span.myclass.myclass2.myclass3 -->
+            <span class="myClass myClass2 myClass3"></span>
+
+
+
+
+
+
+            <!--HTML Entities-->
+            <h1>HTML Entities</h1>
+            <div class="container"><p>This is a paragraph</p></div>
+            <div class="container"><p>This is a                     paragraph</p></div>
+
+            <!-- the last sentence dont potray as it is because of the spaces. But we can give spaces with &nbsp;  -->
+            <div class="container"><p>This is a &nbsp; &nbsp; &nbsp;  paragraph</p></div>
+
+            <!-- to show a tag on website: This is needed because if you want to print <p> in your document then the html will take is as a tag  -->
+                <p> So in this way we can write a tag in browser -- &lt;p&gt;</p>   <!--it will display <p>-->
+            <p>pound is written like this &pound;</p>
+            <p>Copyright is written like this &copy;</p>
+            <p>Empty character is written like this &#8203;</p>
+
+     
+            
+
+<!-- HTML Semantic Tags -->
+    <h1><u>Semantic elements</u></h1>
+    <!-- It helps the developer and search engines to identify specific blocks of the web page.Semantic HTML tags are important for SEO (search engine optimization) because they indicate the role of the content within the tags. Semantic tags are - <header>,<footer>,<nav>,<section>,<article>,<aside>,<details>,<figcaption>,<figure>,<main>,<mark>,<summary>,<time>,etc-->
+
+    <p> It helps the developer and search engines to identify specific blocks of the web page.Semantic HTML tags are important for SEO (search engine optimization) because they indicate the role of the content within the tags. Semantic tags are - &lt;header&gt;,&lt;footer&gt;,&gt;nav&lt;,&lt;section&gt;,&lt;article&gt;,&lt;aside&gt;,etc</p>
+    <p>This is used to rank well our website in search</p>
+
+    
+    <a href = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.semrush.com%2Fblog%2Fsemantic-html5-guide%2F&psig=AOvVaw0K7kxf4I18mfxLwr3usRBu&ust=1679150794365000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCIj33rOa4_0CFQAAAAAdAAAAABAE">Semantic Elements image</a>
+    
+    
+    <p><b><i>Example of a semantic tag:</i></b></p>
+        <p>
+            <details><summary>Show Details:</summary> <!--Summary tag is used to hold the data outside of the details tag-->
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem minima cum, commodi quas possimus  labore at inventore, ipsum laborum blanditiis reiciendis quos corporis, voluptatum velit quis eos voluptatem expedita officiis suscipit. Deleniti ex ut recusandae esse labore nobis veniam aspernatur?
+
+            </details>
+        </p>
+
+
+
+        
+            
+    </body>
+
+</html>

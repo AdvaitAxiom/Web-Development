@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- in a text input (<input type="text" value="Hello">), it sets the initial text. In a checkbox (<input type="checkbox" value="Yes" checked>), it defines the value that gets submitted if the checkbox is checked. -->
+
+<!-- The name attribute is used to identify the form data after it's submitted. If you think of each input as a variable, the name attribute is essentially the variable name that gets sent to the server or handled by JavaScript. -->
+
+ <!-- The value attribute specifies the initial or preset value held by the input. This is the data that will be sent as part of the form when the form is submitted if the user does not change it. -->
+
+
+ <!-- first name, last name, user name, email, phone no. , Password , confirmation of pass, Address, Dob , -->
+<body>
+    <h1>Form to Enroll in Web Dev</h1>
+    <form action="post">
+
+        <div>
+            <!-- in label for = the id of the input for which the label is allocated -->
+            <label for="username">Enter Your User Name: </label>
+            <input type="text" id="username" name="username" placeholder="Enter Your Name" autofocus>
+        </div>
+
+        <div>
+            <!-- Here name are same for both radio buttons so at a time only 1 can be taken -->
+            <label for="Male">Male</label>
+            <input type="radio" id="Male" name="gender" value="male" required>
+            
+            <!-- Here if we change the for from the input's id then the radio will not work from hovering on the text. We have to mark it from the button only. Because the label tag no is not assiciated with its input-->
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female">
+        </div>
+
+        <div>
+            <label for="subscribe">Subscribe to webdev </label>
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+        </div>
+
+        <div>
+            <label for="Comment">Enter your thoughts:
+            </label>
+            <textarea name="textarea" id="Comment" cols="30" rows="10">Enter Your Comments Here</textarea>
+        </div>
+
+        <div>
+            <label for="company">Enter your desired Company: </label>
+            <select name="Company" id="company">
+                <option value="TCS">TCS</option>
+                <option value="CTS">CTS</option>
+                <option value="Wipro">Wipro</option>
+            </select>
+        </div>
+
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>

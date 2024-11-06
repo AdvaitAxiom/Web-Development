@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <!-- <link rel="stylesheet" href="link of the font"> -->
+    <style>
+
+
+        p{      /*Element Selectors: It is used when we want to modify more than one paragraph*/
+            color:red;/*Color declaration type 1*/
+            border: 2px solid red;
+        }
+
+
+        #myId{      /*ID Selectors: It modifys specific paragraph with id*/
+            color:rgb(17, 97, 23);/*Color declaration type 2*/
+        }
+        /* Mostly recomended is class selectors whenever we want to deploy a specific style to a customzable number of paragraph */
+
+
+        .myClass{   /*Class Selector*/
+            color:#20b050;/*Color declaration type 3*/
+             /* It is not impleneted in both cases because the pervious line already contain a myId specifier and it contains styling*/ 
+            background-color: aquamarine; /*It will be implemented in both paragraphs where we used myClass*/
+        }
+
+        footer,span{    /*Grouping Selector*/
+            background-color: bisque;
+        }
+
+        p{
+            /* Fonts are of 2 types-
+            web safe: installed with os dont need to download
+            we: We have to install it before working */
+
+            /* WEB SAFE */
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Font stack: if first one not availablethen 2nd if 2nd if 2nd is unavailable then 3rd and so on*/ 
+            font-size: 23px; /*1/96 th of an inch*/
+            line-height: 1.3em;
+
+            /* WEB */
+            /* link added after the title tag in html/markup */
+        
+        }
+        span{
+            font-weight: bold;
+            font-style: italic;
+        }
+        #abc{
+        background-color:aqua;
+        height: 100px;
+        width: 200px;
+        /* border-width: 4px;
+            border-color: black;
+            border-style: dotted; */
+            /* These can be written as */
+            border: 4px dotted black; /*Does the same thing*/
+            border-radius: 10px; /*to make the edges round*/
+            border-right-color: red;
+            border-bottom-left-radius: 1px8;
+
+    }
+    #def{
+        height: 100px;
+        width: 200px;
+        border: 2px solid black;
+        background-image: url('https://www.codewithharry.com/_next/image/?url=%2Fimg%2Flogo-blue.png&w=96&q=75');
+        background-repeat: no-repeat;/*can be repeat-x or repeat-y*/
+        background-position:12px center;/*can be centre centre(x,y)/centre-top/centre-down/top center/top top/etc*/
+        /* the amount of pixel is the distance from the image to the border in left side */
+    }
+    
+    </style>
+    
+</head>
+<body>
+    <!-- Selectors are of 3 types: id,class, element,Grouping -->
+    <h2>CSS Selectors</h2>
+    <p>Simple paragraph to demonstrate css selectors</p>
+    <p id="myId" class="myClass">This is another Simple paragraph to demonstrate css selectors</p>
+    <!--ID Selector with same name implemented here-->
+    <p id="myId1" class="myClass">Other Simple paragraph to demonstrate css selectors</p>
+    <p id="abc">This is other example of border and height</p>
+    <p id="def">wHO R U</p>
+    <div>
+        <p>Another paragraph in <span>div</span> class</p>
+        <p>hiiii</p>
+    </div>
+
+
+    <footer>This is footer</footer>
+</body>
+</html>

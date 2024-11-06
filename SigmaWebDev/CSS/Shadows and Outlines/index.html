@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows and outlines</title>
+    <style>
+        .box{
+            border: 2px solid black;
+            border-radius: 34px;
+            padding: 30px;
+            box-shadow: 5px 15px 5px #b04a4a;
+            /* h-offset v-offset blur spread color inset */
+            text-shadow: 2px 2px 4px #4a18d2;
+            /* h-offset v-offset blur color  */
+
+            outline: 2px solid red;
+            /* It will be out of the border and it is not a pard of the box model as the border is  */
+            outline-offset: 5px;
+            /* It can be done with outline not with the border  */
+
+            /* Outline will follow border it can't be edited like border with border radius  */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Hello</div>
+</body>
+</html>

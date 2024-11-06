@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font & Texts Properties</title>
+
+    <!-- WE CAN ADD FONT BY LINK TAG ALSO LIKE THIS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&display=swap" rel="stylesheet">
+    <style>
+        /* importing the font  */
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Playball&display=swap');
+
+        /* @import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&display=swap'); */
+
+        /* Font-family */
+        h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+            /* Here if Gill SANS not appear then the next one will be used and so on */
+            font-style: italic;
+            font-weight: bolder;
+            text-decoration: underline;
+            line-height: 2;     /*Gapping between lines within p tag*/
+            letter-spacing: 5px;    /*Gap b/w letters within p tag*/
+        }
+        h2{
+            /* the writing was about fonts but capitalize makes its first letter capital */
+            text-align: center;
+            text-transform: capitalize;
+            text-decoration: underline;
+            text-decoration-color: aqua;
+            text-decoration-style: dashed;
+            text-decoration-thickness: 7px;
+            text-indent: 40px;
+        }
+        
+        span {
+            
+            /* 1. To use the playball font we have to add the font code at the begining of the style
+            OR
+            2. With link tag before the style tag */
+            
+            font-family: "Playball", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        a:visited {
+            color: red;
+        }
+
+        main {
+            font-family: "Kalnia Glaze", serif;
+            border: 3px solid blue;
+            width: 50px;
+            text-overflow: ellipsis;    /*can be clip*/
+            overflow:hidden;    /*it can be scroll*/
+        }
+        h3{
+            border: 2px solid red;
+            width: 100px;
+            word-break: break-all;  /*All words are break and adjusted within the box*/
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Fonts</h1>
+        <h2>about fonts</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, dolores?</p>
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing.</span>
+        <br>
+        <br>
+        icon.
+        <main>
+            Always take requird fonts together all along instead of adding them individually from the google fonts plus
+        </main>
+        <br>
+        <br>
+        <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam nesciunt asperiores similique impedit fugiat maxime accusantium eius? Et maiores enim corrupti commodi aspernatur cupiditate quibusdam quisquam ipsam nisi? Excepturi exercitationem facilis explicabo asperiores dolorem incidunt obcaecati necessitatibus eaque et, perspiciatis enim rem ipsum hic aut minus illo? Illo, facilis explicabo!</h3>
+        <img src="Screenshot 2024-07-31 182020.png" height="400" alt="Not found">
+        <br>
+        <a rel="noopener" href="https://fonts.google.com/selection/embed" target="_blank">Google Font</a>
+    </div>
+</body>
+
+</html>

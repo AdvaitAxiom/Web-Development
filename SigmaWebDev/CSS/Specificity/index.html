@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* CSS has cascade algo to determine which property will be applies as h1 has 3 classes */
+
+        h1 {
+            color: aqua;
+        }
+
+        /* The specificity of h1+class selector=1+10=11 */
+        h1.yellow {
+            color: yellow;
+        }
+
+        .cred {
+            color: red; 
+               }
+
+        .cpurple {
+            /* class selectors are more specific than tag selectors so class selecter will be chosen */
+            
+            /*As it is the last one and all clas  slectors are same type so it will be selected*/
+            color: purple;
+        }  
+
+        /* the last class selector has the highest priority among the same type of selectors*/
+
+        [data-x=a]{ /*ATTRIBUTE SELECTOR*/
+            /*in h2 */
+            /* if data x has value a then it will proceed */
+            /* if it was [data-x] then it means if element has data x then,(without considering x's value) */
+            color: maroon;
+        }
+        a.harryclass.rohan-class[href]:hover{   /*1+10+10+*/
+            color: violet;
+        }
+    </style>
+    <title>Specificity</title>
+</head>
+
+<body>
+    <div>
+        <h1 class="yellow cred cpurple">CSS Specificity</h1>
+
+
+    </div>
+    <---------CASCADING ALGO------>
+        <ol>
+            <li>Position and order of appearance: the order in which your CSS rules appear</li>
+            <li>Specificity: an algorithm that determines which CSS selector has the strongest match</li>
+            <li>Origin: the order in which CSS appears and where it comes from, whether that is a browser style, CSS
+                from a browser extension(User agent Style Sheet), or your authored CSS</li>
+            <li>Importance: some CSS rules are weighted more heavily than others, especially with the !important rule
+                type</li>
+            </ol>
+            <br>
+            <h2 class="hi" data-x ="a">Specificity Calculation</h2>       
+        <div>
+            To calculate specificity, assign a value to each part of the selector:
+            <ul>
+                <li>Universal Selector: 0</li>
+                    <li>Element selectors and pseudo-elements: 1</li>
+                <li>Class selectors, attribute selectors, and pseudo-classes: 10
+                <li>ID selectors: 100</li>
+                <li>Inline styles: 1000
+                Then, add up the values of all the parts in the selector.</li>
+                <li>If we use !important keyword with any edit it will have the highest priority 10000</li>
+            </ul>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+/* Cascading Style sheets:
+        -Style html/ web pages
+        -Make website responsive
+        -Structure a website
+        -Design the website */
+
+/* Syntax:
+         /* p{color:blue} where p= selector, color= property, blue=value----- Selector selects where to put, property selects what to put and value is the value which is to be put */
+
+/* Syntax for multiple properties:
+        header,p.intro------< Group of selectors
+
+        {
+                background-color: red;
+                border-radius: 3px;
+        }----------<   Declaration Block*/
+
+/* How many ways we can apply css----->
+        1. Inline CSS - ADDING CSS ADDING WITH THE MARKUP LINES
+        2. Internal CSS- AVOIDING MARKUP ADDING STYLE TAG INTO THE HEAD WHERE WE CAN STORE CSS
+        3. External CSS- CREATUING A DIFFERENT FILE OF CSS THEN ADD IT WITH MARK UP. GENERALLY IT IS USED WHEM THE LINE OF CODE IS LONG ENOUGH */
+
+
+        /* Selectors are of 4 major types: element, grouping, id,class. */
+        /* Selectors are described in internalcss.html */
+p{
+        color:cadetblue;
+        background-color: black;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        div{
+            background-color: aquamarine;       /*<!--Property : Value */
+        }
+
+        /* class selector */
+        .aqua{
+            background-color: aqua;
+        }
+
+        /* id Selector */
+        #as{
+            background-color: blanchedalmond;
+        }
+
+        /* Child Selector */
+        /* only work if p is the direct child of the div */
+        div>p{
+            background-color: antiquewhite;
+            color: blue;
+        }
+
+        /* descendent selector */
+        div p{
+            color: cadetblue;
+            background-color: brown;
+        }
+
+        /* Universal Selector */
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+
+        /* Pseudo Selector */
+        a:visited{
+            color: green;
+        }
+        /* color of the link if not visited  */
+        a:link{
+            color: brown;
+        }
+        /* if link is active  */
+        a:active{
+            background-color: red;
+        }
+        /* Hovering on the link */
+        a:hover{
+            background-color: aqua;
+        }
+
+        /* p tags which are the first child of their parent will be edited */
+        p:first-child{
+            background-color: blue;
+        }
+
+        /* Attribute Selector */
+        [data-x=a]{
+            /* if data x has value a then it will proceed */
+            /* if it was [data-x] then it means if element has data x then,(without considering x's value) */
+            color: maroon;
+        }
+    </style>
+</head>
+<body>
+    <!-- Class Selector  -->
+    <div class="aqua">I am div
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, omnis nostrum repellendus odit impedit libero dignissimos iure similique. Velit debitis fuga sequi. Officiis earum quam magnam inventore ullam quas aspernatur saepe omnis repellendus eaque!
+        </p>
+        <article>
+            <p>
+                <!-- It will not be in the child selector as it is not directly into the div -->
+
+                <!-- it will be in the descendent selector -->
+                Lorem ipsum dolor sit amet.
+            </p>
+        </article>
+    </div>
+    <div>Hello
+        <p>Hi</p>
+    </div>
+
+    <!-- id Selector  -->
+    <div id="as"> I am another div</div>
+
+
+    <a target= "blank" href="https://www.google.com">Google</a>
+    <a href="https://facebook.com">Facebook</a>
+
+    <main>
+        <p>Hello</p>
+        <p>Hi</p>
+    </main>
+</body>
+</html>
