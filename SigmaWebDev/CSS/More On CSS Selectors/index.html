@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        .box:first-child{
+            background-color: red;
+        }
+        .box::first-line{
+            color: blue;    /*The first line of the box classes will be blue.*/
+        }
+        .boxes *{
+            border: 2px solid green;    /*Every child of boxes class*/
+        }
+        p,a,.box,[data-color="primary"]{/*p,a,.box---> they are used for grouping paragraph, anchor and box classes. All of these will follow the current edit*/
+            margin-top: 40px;
+            padding-top: 20px;
+        }
+        .globes:nth-child(odd){
+            background-color: blue; /*odd numbered globes classes will get this property*/
+        }
+        .globes:nth-last-child(2){
+            background-color: blanchedalmond;   /*the 2nd last globes child class will get this property */
+        }
+
+        /* These are used to dynamically add content (before and after)*/
+        .globe::before{
+            content: "Hello World!";
+            color: red;
+        }
+        .globe::after{
+            content: "Bye World!";
+            color: blue;
+        }
+
+        /* Selector */
+
+        ::selection{    /*Will work for all selection on the page if it is not defined before the double colon.*/
+            background-color: black;
+            color: aqua;
+        }
+
+        .globes::first-letter{      /*Target the first letter of the globes childs */
+            color: peru;
+            font-size:40px;
+
+        }
+
+        input::placeholder{
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box">I am box</div>
+        <div data-color="primary"class="box">I am box</div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sunt optio cumque neque quod architecto nihil, recusandae perspiciatis accusantium nulla minus esse pariatur atque, aspernatur animi nobis quasi ipsum ipsa illo modi officia. Rerum eum porro doloribus, voluptates in nostrum recusandae eos ipsum inventore debitis voluptatem modi numquam id adipisci.</div>
+    </div>
+    <div class="globe">
+        <div class="globes">I am globe</div>
+        <div class="globes">I am globe</div>
+        <div class="globes">I am globe</div>
+        <div class="globes">I am globe</div>
+        <div class="globes">I am globe</div>
+        <div class="globes">I am globe</div>
+        <div class="globes">I am globe</div>
+
+        <input type="text" placeholder="Type your name">
+    </div>
+</body>
+</html>
