@@ -1,15 +1,33 @@
+<!-- NOW WE USE GRID AND FLEXBOX INSTEAD OF THESE. THESE WERE USED PREVIOUSLY -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Float and CLear</title>
+    <Style>
+        .Cards{
+            border: 2px solid black;
+            display: flow-root;     /*Put the image within the border of the Cards class. Don't let the image to overflow from it.*/
+        }
+        img{
+            float: left;   /*For this the image will float left of the content where previously it was acting like a block content and the content was appearing below it.*/
+        }
+        .Card{
+            border: 2px solid red;
+        }
+        .Card:nth-child(3){/*This will ensure modification of 3rd class among the classs 'Card'*/
+            background-color: aqua;
+            Clear: left;    /*If image is floating left and we define it to the Card 3 class then this class will not allow anything to float at its left*/
+        }
+    </Style>
 </head>
 <body>
     <div class="Cards">
-        <div class="Cards">Card 1</div>
-        <div class="Cards">Card 2</div>
-        <div class="Cards">Card 3</div>
+        <img src="https://images.pexels.com/photos/30309178/pexels-photo-30309178/free-photo-of-vibrant-parrot-perched-on-a-balcony-railing.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="image not Found" height="150">
+        <div class="Card">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, aliquid?</div>
+        <div class="Card">Card 2</div>
+        <div class="Card">Card 3</div>
     </div>
     
 </body>
