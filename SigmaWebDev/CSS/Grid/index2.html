@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid2</title>
+    <style>
+        .container{
+            width: 80vw;
+            border: 2px solid black;
+            display: grid;  /*Can define rows and columns*/
+            grid-template-areas: "nav nav nav"
+                                "side article article"
+                                "footer footer footer";
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            /* grid-template-columns: repeat(4, 1fr); */
+            /* grid-template-columns: repeat(4, minmax(100px, 1fr)); */
+
+            gap: 34px;  /*Dont use padding while using it*/
+        }
+        .items{
+            border: 2px solid red;
+            height: 55px;
+        }
+        .item1{
+           grid-area: nav;
+        } 
+        .item2{
+           grid-area: side;
+        } 
+        .item3{
+           grid-area: article;
+        } 
+        .item4{
+           grid-area: footer;
+        } 
+        .item5{
+           grid-area: footer;
+        } 
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="items item1">1</div>
+        <div class="items item2">2</div>
+        <div class="items item3">3</div>
+        <div class="items item4">4</div>
+        <div class="items item5">5</div>
+    </div>
+</body>
+</html>
