@@ -15,4 +15,8 @@ if(isTrue){
 }
 console.log("Your number is "+a)
 
+document.title = "New Name" //New title will be there instead of the frist one
+
+document.body.style.backgroundColor = "yellow"  //This can add inline css 
+
 // Here we can run this script in terminal as other codes but few of its elements are in browser so it will not run properly. Like alert prompt confirm
