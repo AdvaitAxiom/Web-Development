@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Variables</title>
+    <style>
+        :root{  /*To declare global variable*/
+            --color: blue;  /*Global variable*/
+            --seccolor: rgb(131, 131, 226); /*Global Variable*/
+            --defpad: 20px; /*To give default padding*/
+            --defop: 0.2; /*To give default opacity*/
+            /*It can also hold background urls and strings*/
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            background-color:var(--color);
+        }
+        ul{
+            display: flex;
+        }
+        ul li{
+            list-style: none;
+            padding: 5px;
+        }
+        ul li:first-child{
+            --color:rgb(53, 242, 214);/*Local variable overwriting the global variable*/
+            background-color: var(--color, red);        /*Find color variablw if not found then use red*/
+        }
+        .container{
+            background-color: var(--seccolor);
+            padding: var(--defpad)
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="container">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, voluptatem, beatae nam nemo odit ipsa voluptatibus temporibus officia quaerat in, voluptate quasi possimus explicabo! Ipsam, perferendis. Odio saepe fuga impedit? Ratione, laudantium magnam. Placeat voluptatum officia natus, molestias repellat modi ad? Dicta velit id iure.</div>
 </body>
 </html>
