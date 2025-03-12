@@ -3,7 +3,7 @@ console.log("Variables, DataTypes and objects")
 //Data types in JS
 
 //1.Primitive
-    //Null Number String Symbol Undefined Boolean Big Int
+    //Null Number String Symbol Undefined Boolean BigInt
 
 //2.Object (User Defined)
 var a =5;   //var-->scope global
@@ -16,15 +16,16 @@ console.log(a+b+c);
 console.log(typeof a, typeof b, typeof c);
 
 {
-    let a = 55;     //let-->scope block
-    console.log(a);
+    let a = 55;     //let & const-->scope block
+    console.log(a); //print 55 because it is in the block if there is no value in block then it will search for global
 }
+console.log(a); //this will print 5 not 55 because 55 was a block element and out of the block always global will be taken
 
 // const a1 = 6;
-// a1 = a1+1;  //not allwoerd a1 constant
+// a1 = a1+1;  //not allwoerd (a1 constant)
 
-//JS Linter--> JS Linter is a tool that analyzes JavaScript code to detect potential errors, enforce coding standards, and improve code quality.
-
+//JS Linter--> JS Linter is a tool in vs code that analyzes JavaScript code to detect potential errors, enforce coding standards, and improve code quality.
+    // eg: if  let c =10; then we cant again write const c
 let x = "Happy";
 let y = 22;
 let z = 3.55;
@@ -34,8 +35,9 @@ let r = null;   //typeof null is object
 
 // Historical Bug in JavaScript
 
-// The original implementation of typeof in JavaScript stored type tags as binary values.
-// The value null was internally represented as 0x00 (all zero bits), which was mistakenly categorized as an "object".
+// The original implementation of typeof in JavaScript stored type-tagged format where the first 3 bits of the type tag represented the type of the value.
+//Objects had a type-tag of 000
+// The value null was internally represented as 0x00 (all zero bits), which was mistakenly categorized as an "object" due to type-tagging scheme.
 // This bug was never fixed for backward compatibility reasons.
 // null is a primitive, NOT an object
 

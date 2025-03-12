@@ -11,5 +11,6 @@ We can use js to create multiple codes like
 -- creating new folders
 -- moving files from one folder to another
 -- downloading files from internet
+-- readout alter file content
 
 */
